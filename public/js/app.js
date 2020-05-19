@@ -9,7 +9,7 @@ weatheForm.addEventListener('submit',(e) => {
 
     loc.innerHTML = input.value
     fore.innerHTML = 'loading...'
-    fetch('http://localhost:3000/weather?address='+input.value).then((response) => {
+    fetch('/weather?address='+input.value).then((response) => {
         response.json().then((data) => {
             if (data.error) {
                 loc.innerHTML = data.error
